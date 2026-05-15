@@ -33,7 +33,7 @@ export function Hero() {
                 href={SITE.bspUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-7 py-3.5 text-base font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-7 py-3.5 text-base font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors"
               >
                 Open Bible Study Pro
                 <span aria-hidden>→</span>
@@ -75,7 +75,7 @@ export function Hero() {
               <div
                 aria-hidden
                 className="absolute -inset-3 rounded-[1.5rem] blur-xl"
-                style={{ background: "var(--gold-glow)" }}
+                style={{ background: "var(--accent-glow)" }}
               />
               <Image
                 src="/godchaser-cover.png"

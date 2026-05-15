@@ -41,7 +41,7 @@ export default function BookPage() {
                     href="https://godchaser.faith"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors"
                   >
                     Buy the book
                   </a>
@@ -125,8 +125,8 @@ function BookCover() {
             <stop offset="100%" stopColor="#0f1226" />
           </linearGradient>
           <linearGradient id="cover-stroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#e6c155" />
-            <stop offset="100%" stopColor="#b89a3e" />
+            <stop offset="0%" stopColor="#f6e979" />
+            <stop offset="100%" stopColor="#d4c54a" />
           </linearGradient>
         </defs>
         <rect width="300" height="400" rx="6" fill="url(#cover-bg)" />
@@ -183,7 +183,7 @@ function BookCover() {
           fontSize="10"
           letterSpacing="3"
           fontWeight="600"
-          fill="#e6c155"
+          fill="#f6e979"
         >
           EV EVANS
         </text>

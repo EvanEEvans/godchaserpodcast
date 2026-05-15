@@ -5,10 +5,10 @@ import { PLATFORMS, UNIVERSE } from "@/lib/site";
 
 export function Universe() {
   return (
-    <Section>
+    <Section tone="lavender">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple-deep">
             Beyond this page
           </p>
           <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">

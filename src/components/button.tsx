@@ -10,7 +10,7 @@ type Size = "md" | "lg";
  * ghost     — transparent with purple outline, purple text (light surfaces only)
  */
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-text hover:bg-accent-hover border-2 border-accent",
+  primary: "bg-accent text-text hover:bg-accent-deep border-2 border-accent",
   secondary:
     "bg-purple text-text-inverse hover:bg-purple-hover border-2 border-purple",
   ghost:

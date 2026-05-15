@@ -4,7 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 
 export function NewsletterSection() {
   return (
-    <Section tone="navy">
+    <Section tone="lavender">
       <Container>
         <NewsletterSignup variant="section" />
       </Container>

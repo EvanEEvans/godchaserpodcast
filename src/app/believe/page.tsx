@@ -71,7 +71,7 @@ export default function BelievePage() {
           </p>
           <Link
             href="/believe/begin"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent text-text px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent text-text px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors"
           >
             Start here <span aria-hidden>→</span>
           </Link>

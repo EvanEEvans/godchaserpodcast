@@ -70,7 +70,7 @@ export function ContactForm() {
         </p>
         <a
           href="/library"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors"
         >
           Browse the Library <span aria-hidden>→</span>
         </a>
@@ -138,7 +138,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-accent text-text px-7 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors disabled:opacity-60"
+          className="rounded-full bg-accent text-text px-7 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors disabled:opacity-60"
         >
           {status === "loading" ? "Sending…" : "Send message"}
         </button>

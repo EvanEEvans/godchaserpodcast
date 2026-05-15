@@ -19,7 +19,7 @@ export function BSPCTA() {
         href={SITE.bspUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 font-semibold uppercase tracking-[0.06em] text-sm hover:bg-accent-hover transition-colors"
+        className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 font-semibold uppercase tracking-[0.06em] text-sm hover:bg-accent-deep transition-colors"
       >
         Open Bible Study Pro <span aria-hidden>→</span>
       </a>

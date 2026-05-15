@@ -21,21 +21,21 @@ export function PostHeroArt({ slug, category }: Props) {
       >
         <defs>
           <radialGradient id={`glow-${slug}`} cx="20%" cy="0%" r="70%">
-            <stop offset="0%" stopColor="#6b5b95" stopOpacity="0.45" />
-            <stop offset="60%" stopColor="#6b5b95" stopOpacity="0.08" />
-            <stop offset="100%" stopColor="#6b5b95" stopOpacity="0" />
+            <stop offset="0%" stopColor="#72709b" stopOpacity="0.45" />
+            <stop offset="60%" stopColor="#72709b" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#72709b" stopOpacity="0" />
           </radialGradient>
           <radialGradient id={`gold-${slug}`} cx="95%" cy="100%" r="65%">
-            <stop offset="0%" stopColor="#e6c155" stopOpacity="0.30" />
-            <stop offset="60%" stopColor="#e6c155" stopOpacity="0.04" />
-            <stop offset="100%" stopColor="#e6c155" stopOpacity="0" />
+            <stop offset="0%" stopColor="#f6e979" stopOpacity="0.30" />
+            <stop offset="60%" stopColor="#f6e979" stopOpacity="0.04" />
+            <stop offset="100%" stopColor="#f6e979" stopOpacity="0" />
           </radialGradient>
           <linearGradient id={`stroke-${slug}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#e6c155" />
-            <stop offset="100%" stopColor="#b89a3e" />
+            <stop offset="0%" stopColor="#f6e979" />
+            <stop offset="100%" stopColor="#d4c54a" />
           </linearGradient>
         </defs>
-        <rect width="800" height="350" fill="#1a1d3a" />
+        <rect width="800" height="350" fill="#14163c" />
         <rect width="800" height="350" fill={`url(#glow-${slug})`} />
         <rect width="800" height="350" fill={`url(#gold-${slug})`} />
         <Shape

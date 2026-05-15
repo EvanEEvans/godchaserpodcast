@@ -7,8 +7,8 @@ type Status = "idle" | "loading" | "success" | "error";
 
 type Props = {
   /**
-   * `section` — used inside a navy band (homepage). Transparent wrapper, white text, gold submit.
-   * `inline` — used inside posts on lavender bg. Self-contained navy card.
+   * `section` — used inside a lavender band on the homepage. Navy text on lavender, gold submit.
+   * `inline`  — used inside posts on cream bg. Self-contained navy card with white text.
    */
   variant?: "section" | "inline";
 };
@@ -58,7 +58,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
       <p
         className={cn(
           "text-[0.7rem] tracking-[0.32em] uppercase font-semibold",
-          inline ? "text-accent" : "text-accent",
+          inline ? "text-accent" : "text-purple-deep",
         )}
       >
         {inline ? "Sunday letters" : "Newsletter"}
@@ -68,7 +68,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           "mt-3 font-display uppercase tracking-[0.01em]",
           inline
             ? "text-2xl md:text-3xl text-text-inverse"
-            : "text-3xl md:text-5xl text-text-inverse",
+            : "text-3xl md:text-5xl text-text",
         )}
       >
         {inline ? "Keep growing." : "Sunday letters."}
@@ -78,7 +78,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           "mt-4 max-w-xl leading-relaxed",
           inline
             ? "text-text-inverse/80 text-[0.95rem]"
-            : "text-text-inverse/80 text-lg",
+            : "text-text-dim text-lg",
         )}
       >
         {inline
@@ -101,12 +101,17 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading" || status === "success"}
-          className="flex-1 rounded-full bg-bg-elevated border border-line px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className={cn(
+            "flex-1 rounded-full bg-bg-elevated px-5 py-3 placeholder:text-text-muted focus:outline-none transition-colors",
+            inline
+              ? "border border-line text-text focus:border-accent"
+              : "border-2 border-purple/30 text-text focus:border-purple",
+          )}
         />
         <button
           type="submit"
           disabled={status === "loading" || status === "success"}
-          className="rounded-full bg-accent text-text px-7 py-3 font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors disabled:opacity-60"
+          className="rounded-full bg-accent text-text px-7 py-3 font-semibold uppercase tracking-[0.06em] hover:bg-accent-deep transition-colors disabled:opacity-60"
         >
           {status === "loading"
             ? "Subscribing…"
@@ -120,7 +125,13 @@ export function NewsletterSignup({ variant = "section" }: Props) {
         <p
           className={cn(
             "mt-4 text-sm",
-            status === "success" ? "text-accent" : "text-text-inverse/80",
+            inline
+              ? status === "success"
+                ? "text-accent"
+                : "text-text-inverse/80"
+              : status === "success"
+                ? "text-purple-deep font-medium"
+                : "text-text-dim",
           )}
         >
           {message}

@@ -17,7 +17,7 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: "80px 96px",
           background:
-            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(107,91,149,0.30), transparent 60%), radial-gradient(ellipse 700px 400px at 95% 105%, rgba(230,193,85,0.18), transparent 60%), #1a1d3a",
+            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(114,112,155,0.30), transparent 60%), radial-gradient(ellipse 700px 400px at 95% 105%, rgba(246,233,121,0.18), transparent 60%), #14163c",
           color: "#ffffff",
           fontFamily: "sans-serif",
         }}
@@ -27,7 +27,7 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             gap: 16,
-            color: "#e6c155",
+            color: "#f6e979",
             letterSpacing: "0.18em",
             fontSize: 22,
             textTransform: "uppercase",
@@ -38,7 +38,7 @@ export default async function Image() {
             style={{
               width: 10,
               height: 10,
-              background: "#e6c155",
+              background: "#f6e979",
               borderRadius: 999,
             }}
           />
@@ -62,7 +62,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: 30,
-              color: "#d4cce0",
+              color: "#c5b8c2",
               maxWidth: 880,
               lineHeight: 1.35,
               display: "flex",
@@ -77,12 +77,12 @@ export default async function Image() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            color: "#9b8fb5",
+            color: "#72709b",
             fontSize: 22,
           }}
         >
           <div style={{ display: "flex" }}>godchaserpodcast.com</div>
-          <div style={{ display: "flex", color: "#e6c155" }}>
+          <div style={{ display: "flex", color: "#f6e979" }}>
             Bible Study Pro inside
           </div>
         </div>
