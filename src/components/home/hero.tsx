@@ -9,7 +9,7 @@ export function Hero() {
           Introducing — Bible Study Pro
         </p>
 
-        <h1 className="fade-in-up delay-100 mt-6 font-serif text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight max-w-[18ch]">
+        <h1 className="fade-in-up delay-100 mt-6 font-display text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight max-w-[18ch]">
           Study the Bible like you&rsquo;ve never studied it before.
         </h1>
 
@@ -38,7 +38,7 @@ export function Hero() {
               key={primary}
               className="rounded-2xl border border-line bg-bg-elevated p-5"
             >
-              <dt className="font-serif text-base text-text">{primary}</dt>
+              <dt className="font-display text-base text-text">{primary}</dt>
               <dd className="text-xs uppercase tracking-[0.24em] text-text-muted mt-2">
                 {secondary}
               </dd>

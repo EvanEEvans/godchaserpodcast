@@ -58,7 +58,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-accent/40 bg-bg-elevated p-8">
-        <h2 className="font-serif text-2xl md:text-3xl font-semibold text-accent">
+        <h2 className="font-display text-2xl md:text-3xl font-semibold text-accent">
           Thank you.
         </h2>
         <p className="mt-3 text-text-dim">

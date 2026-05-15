@@ -19,7 +19,7 @@ export default function BelievePage() {
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
               Statement of Faith
             </p>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
               What we believe.
             </h1>
             <p className="mt-5 text-lg text-text-dim max-w-2xl">
@@ -27,7 +27,7 @@ export default function BelievePage() {
               and we believe they are clear in Scripture for any honest reader.
             </p>
 
-            <blockquote className="mt-10 max-w-2xl border-l-2 border-accent pl-6 font-serif italic text-lg text-text-dim">
+            <blockquote className="mt-10 max-w-2xl border-l-2 border-accent pl-6 italic text-lg text-text-dim">
               For I am not ashamed of the gospel, for it is the power of God for
               salvation to everyone who believes.
               <span className="block mt-2 not-italic text-xs uppercase tracking-[0.24em] text-text-muted">
@@ -49,7 +49,7 @@ export default function BelievePage() {
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-2 font-serif text-2xl font-semibold text-text">
+                <h2 className="mt-2 font-display text-2xl font-semibold text-text">
                   {b.title}
                 </h2>
                 <p className="mt-3 text-text-dim leading-relaxed">{b.body}</p>
@@ -64,7 +64,7 @@ export default function BelievePage() {
           <p className="text-xs tracking-[0.28em] uppercase text-accent">
             For the seeker
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             Never said yes to Jesus?
           </h2>
           <p className="mt-4 text-lg text-text-dim leading-relaxed">

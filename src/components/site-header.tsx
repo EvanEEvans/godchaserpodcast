@@ -39,7 +39,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="group flex items-center gap-2">
           <Logomark className="h-6 w-6 text-accent" />
-          <span className="font-serif text-[1.05rem] tracking-[0.18em] text-text">
+          <span className="font-display text-[1.05rem] tracking-[0.18em] text-text">
             THE GODCHASER
           </span>
         </Link>
@@ -85,7 +85,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-serif text-2xl py-3 border-b border-line text-text"
+                className="font-display text-2xl py-3 border-b border-line text-text"
               >
                 {item.label}
               </Link>

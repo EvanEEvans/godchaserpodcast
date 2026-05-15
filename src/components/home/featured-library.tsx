@@ -16,7 +16,7 @@ export function FeaturedLibrary() {
             <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
               From the Library
             </p>
-            <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+            <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
               Latest teaching.
             </h2>
           </div>

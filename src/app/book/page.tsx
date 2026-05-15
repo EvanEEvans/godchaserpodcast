@@ -23,7 +23,7 @@ export default function BookPage() {
               <p className="text-xs tracking-[0.28em] uppercase text-accent">
                 The Book
               </p>
-              <h1 className="mt-4 font-serif text-4xl md:text-5xl font-bold tracking-tight">
+              <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
                 The Godchaser.
               </h1>
               <p className="mt-5 text-lg text-text-dim max-w-xl">
@@ -58,7 +58,7 @@ export default function BookPage() {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             Sample Chapter
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             Chapter One.
           </h2>
           <div className="prose-reading mt-10">
@@ -72,7 +72,7 @@ export default function BookPage() {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             More books
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             On the way.
           </h2>
           <p className="mt-4 max-w-xl text-text-dim">
@@ -88,7 +88,7 @@ export default function BookPage() {
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   Coming soon
                 </p>
-                <p className="font-serif text-xl text-text-dim italic">
+                <p className="text-xl text-text-dim italic">
                   Title in progress
                 </p>
               </div>

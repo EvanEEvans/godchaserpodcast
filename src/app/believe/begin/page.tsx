@@ -20,7 +20,7 @@ export default function BeginPage() {
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
               Start Here
             </p>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
               The simplest place to start.
             </h1>
             <p className="mt-5 text-lg text-text-dim">
@@ -131,7 +131,7 @@ export default function BeginPage() {
           </div>
 
           <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold">
               Did you say yes? Tell us.
             </h2>
             <p className="mt-3 text-text-dim">
@@ -150,10 +150,10 @@ export default function BeginPage() {
             </div>
           </div>
 
-          <p className="mt-12 text-center font-serif italic text-text-dim">
+          <p className="mt-12 text-center italic text-text-dim">
             Welcome home.
           </p>
-          <p className="mt-2 text-center font-serif italic text-accent">
+          <p className="mt-2 text-center italic text-accent">
             Soso lobi.
           </p>
 

@@ -15,7 +15,7 @@ export function PostCard({ post }: Props) {
       <span className="text-[0.7rem] tracking-[0.24em] uppercase text-accent">
         {post.category}
       </span>
-      <h3 className="mt-3 font-serif text-xl md:text-2xl font-semibold leading-snug text-text group-hover:text-accent transition-colors">
+      <h3 className="mt-3 font-display text-xl md:text-2xl font-semibold leading-snug text-text group-hover:text-accent transition-colors">
         {post.title}
       </h3>
       <p className="mt-3 text-text-dim text-[0.95rem] leading-relaxed line-clamp-3">

@@ -11,7 +11,7 @@ export function Universe() {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             Beyond this page
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             Other places we make disciples.
           </h2>
         </div>
@@ -35,7 +35,7 @@ function UniverseCard({
   if (card.showPlatforms) {
     return (
       <div className="rounded-2xl border border-line bg-bg-elevated p-8 flex flex-col">
-        <h3 className="font-serif text-2xl font-semibold text-text">
+        <h3 className="font-display text-2xl font-semibold text-text">
           {card.name}
         </h3>
         <p className="mt-3 text-text-dim leading-relaxed">{card.blurb}</p>
@@ -58,7 +58,7 @@ function UniverseCard({
 
   const inner = (
     <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated p-8 flex flex-col">
-      <h3 className="font-serif text-2xl font-semibold text-text group-hover:text-accent transition-colors">
+      <h3 className="font-display text-2xl font-semibold text-text group-hover:text-accent transition-colors">
         {card.name}
       </h3>
       <p className="mt-3 text-text-dim leading-relaxed">{card.blurb}</p>

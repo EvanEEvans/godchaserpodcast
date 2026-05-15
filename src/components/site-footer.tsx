@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div>
-            <h3 className="font-serif text-sm tracking-[0.18em] text-text-muted uppercase">
+            <h3 className="font-display text-sm tracking-[0.18em] text-text-muted uppercase">
               About
             </h3>
             <ul className="mt-4 space-y-2 text-text-dim text-sm">
@@ -30,7 +30,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif text-sm tracking-[0.18em] text-text-muted uppercase">
+            <h3 className="font-display text-sm tracking-[0.18em] text-text-muted uppercase">
               Library
             </h3>
             <ul className="mt-4 space-y-2 text-text-dim text-sm">
@@ -75,7 +75,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif text-sm tracking-[0.18em] text-text-muted uppercase">
+            <h3 className="font-display text-sm tracking-[0.18em] text-text-muted uppercase">
               Listen
             </h3>
             <ul className="mt-4 space-y-2 text-text-dim text-sm">
@@ -95,7 +95,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="font-serif text-sm tracking-[0.18em] text-text-muted uppercase">
+            <h3 className="font-display text-sm tracking-[0.18em] text-text-muted uppercase">
               Connect
             </h3>
             <ul className="mt-4 space-y-2 text-text-dim text-sm">
@@ -140,13 +140,13 @@ export function SiteFooter() {
 
         <div className="mt-14 pt-8 border-t border-line flex flex-col md:flex-row gap-6 md:items-end md:justify-between">
           <div>
-            <p className="font-serif text-2xl tracking-[0.18em] text-text">
+            <p className="font-display text-2xl tracking-[0.18em] text-text">
               THE GODCHASER
             </p>
             <p className="mt-2 text-sm text-text-dim italic">
               {SITE.tagline}
             </p>
-            <p className="mt-4 max-w-md text-sm text-text-muted italic font-serif">
+            <p className="mt-4 max-w-md text-sm text-text-muted italic font-display">
               &ldquo;Go therefore and make disciples of all nations,
               baptizing them in the name of the Father and of the Son and of
               the Holy Spirit, teaching them to observe all that I have

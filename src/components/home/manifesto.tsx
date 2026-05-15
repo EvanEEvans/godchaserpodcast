@@ -5,7 +5,7 @@ export function Manifesto() {
   return (
     <Section>
       <Container size="reading">
-        <div className="font-serif text-[1.25rem] md:text-[1.4rem] leading-[1.7] text-text space-y-6">
+        <div className="font-display text-[1.25rem] md:text-[1.4rem] leading-[1.7] text-text space-y-6">
           <p>
             Welcome. This is a home for people chasing God with everything they
             have.

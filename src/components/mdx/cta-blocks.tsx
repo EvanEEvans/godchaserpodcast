@@ -8,7 +8,7 @@ export function BSPCTA() {
       <p className="text-xs tracking-[0.24em] uppercase text-accent">
         Bible Study Pro
       </p>
-      <h3 className="mt-3 font-serif text-2xl md:text-3xl font-semibold">
+      <h3 className="mt-3 font-display text-2xl md:text-3xl font-semibold">
         Study Scripture with Scripture.
       </h3>
       <p className="mt-3 text-text-dim max-w-xl">
@@ -33,7 +33,7 @@ export function BookCTA() {
       <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
         The Book
       </p>
-      <h3 className="mt-3 font-serif text-2xl md:text-3xl font-semibold">
+      <h3 className="mt-3 font-display text-2xl md:text-3xl font-semibold">
         Keep reading where this left off.
       </h3>
       <p className="mt-3 text-text-dim max-w-xl">

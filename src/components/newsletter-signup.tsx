@@ -57,7 +57,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             Newsletter
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             Sunday letters.
           </h2>
           <p className="mt-4 text-text-dim max-w-xl">
@@ -70,7 +70,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           <p className="text-xs tracking-[0.24em] uppercase text-accent">
             Sunday letters
           </p>
-          <h3 className="mt-2 font-serif text-2xl font-semibold">
+          <h3 className="mt-2 font-display text-2xl font-semibold">
             Keep growing.
           </h3>
           <p className="mt-2 text-text-dim text-[0.95rem]">

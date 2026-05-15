@@ -20,7 +20,7 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
               About
             </p>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl font-bold tracking-tight max-w-3xl">
+            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight max-w-3xl">
               A community shaped by one Book.
             </h1>
           </div>
@@ -57,7 +57,7 @@ export default function AboutPage() {
             {UNIVERSE.map((u) => {
               const inner = (
                 <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated p-6">
-                  <h3 className="font-serif text-xl font-semibold text-text">
+                  <h3 className="font-display text-xl font-semibold text-text">
                     {u.name}
                   </h3>
                   <p className="mt-2 text-text-dim text-[0.95rem]">{u.blurb}</p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold">
               Connect
             </h2>
             <p className="mt-3 text-text-dim max-w-xl">
@@ -132,7 +132,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <p className="mt-12 text-center font-serif italic text-accent">
+          <p className="mt-12 text-center italic text-accent">
             Soso lobi.
           </p>
         </Container>

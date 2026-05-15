@@ -11,7 +11,7 @@ export function Beliefs() {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             Statement of Faith
           </p>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
             What we believe.
           </h2>
           <p className="mt-4 text-text-dim">Twelve things, all from the Book.</p>
@@ -23,7 +23,7 @@ export function Beliefs() {
               key={b.title}
               className="rounded-xl border border-line border-l-2 border-l-accent bg-bg-elevated px-5 py-4"
             >
-              <h3 className="font-serif text-base font-medium text-text">
+              <h3 className="font-display text-base font-medium text-text">
                 {b.title}
               </h3>
             </li>

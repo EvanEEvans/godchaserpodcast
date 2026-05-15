@@ -31,7 +31,7 @@ export default async function LibraryIndex(props: {
           <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
             The Library
           </p>
-          <h1 className="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight">
+          <h1 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight">
             Teaching, testimony, and tools for the chase.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-text-dim">

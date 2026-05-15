@@ -78,7 +78,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
           <p className="text-xs tracking-[0.28em] uppercase text-accent">
             {post.category}
           </p>
-          <h1 className="mt-4 font-serif text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+          <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
             {post.title}
           </h1>
           <p className="mt-5 text-text-dim text-lg leading-relaxed">
@@ -125,7 +125,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
 
         {related.length > 0 && (
           <Container className="mt-24">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold">
               Read next
             </h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -138,7 +138,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
                   <span className="text-[0.7rem] tracking-[0.24em] uppercase text-accent">
                     {p.category}
                   </span>
-                  <h3 className="mt-3 font-serif text-xl font-semibold group-hover:text-accent transition-colors">
+                  <h3 className="mt-3 font-display text-xl font-semibold group-hover:text-accent transition-colors">
                     {p.title}
                   </h3>
                   <p className="mt-2 text-text-dim text-[0.95rem]">

@@ -1,21 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Anton, Outfit } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const anton = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
-  axes: ["opsz"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full`}
+      className={`${anton.variable} ${outfit.variable} h-full`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-bg text-text">
