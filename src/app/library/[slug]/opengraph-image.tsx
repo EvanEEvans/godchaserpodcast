@@ -27,9 +27,9 @@ export default async function Image({
           justifyContent: "space-between",
           padding: "72px 96px",
           background:
-            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(212,168,90,0.20), transparent 60%), #1a1815",
-          color: "#f7f3e8",
-          fontFamily: "serif",
+            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(107,91,149,0.30), transparent 60%), radial-gradient(ellipse 700px 400px at 95% 105%, rgba(230,193,85,0.18), transparent 60%), #1a1d3a",
+          color: "#ffffff",
+          fontFamily: "sans-serif",
         }}
       >
         <div
@@ -37,34 +37,36 @@ export default async function Image({
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            color: "#d4a85a",
-            letterSpacing: "0.28em",
+            color: "#e6c155",
+            letterSpacing: "0.18em",
             fontSize: 20,
             textTransform: "uppercase",
+            fontWeight: 700,
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <div
               style={{
-                width: 8,
-                height: 8,
-                background: "#d4a85a",
+                width: 10,
+                height: 10,
+                background: "#e6c155",
                 borderRadius: 999,
               }}
             />
             The Godchaser
           </div>
-          <div style={{ display: "flex", color: "#c4bdb0" }}>{category}</div>
+          <div style={{ display: "flex", color: "#d4cce0" }}>{category}</div>
         </div>
 
         <div
           style={{
-            fontSize: title.length > 60 ? 64 : 80,
-            fontWeight: 700,
-            lineHeight: 1.1,
-            letterSpacing: "-0.02em",
+            fontSize: title.length > 60 ? 68 : 84,
+            fontWeight: 800,
+            lineHeight: 1.05,
+            letterSpacing: "0.005em",
             maxWidth: 1000,
             display: "flex",
+            textTransform: "uppercase",
           }}
         >
           {title}
@@ -75,12 +77,12 @@ export default async function Image({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            color: "#968d7e",
+            color: "#9b8fb5",
             fontSize: 22,
           }}
         >
           <div style={{ display: "flex" }}>godchaserpodcast.com</div>
-          <div style={{ display: "flex", color: "#d4a85a" }}>
+          <div style={{ display: "flex", color: "#e6c155" }}>
             Scripture Interpreting Scripture
           </div>
         </div>

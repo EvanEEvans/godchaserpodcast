@@ -45,9 +45,9 @@ export function NewsletterSignup({ variant = "section" }: Props) {
 
   const wrapperClasses = cn(
     variant === "section" &&
-      "rounded-2xl border border-line bg-bg-elevated/60 p-8 md:p-12",
+      "rounded-2xl border border-line bg-bg-elevated p-8 md:p-12",
     variant === "inline" &&
-      "rounded-2xl border border-line bg-bg-elevated/60 p-6 my-12",
+      "rounded-2xl border border-line bg-bg-elevated p-6 my-12",
   );
 
   return (
@@ -94,7 +94,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading" || status === "success"}
-          className="flex-1 rounded-full bg-bg border border-line-soft px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="flex-1 rounded-full bg-bg border border-line px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
         />
         <button
           type="submit"

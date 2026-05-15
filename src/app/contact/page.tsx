@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="hero-gradient">
+      <section className="hero-wash">
         <Container>
           <div className="pt-24 pb-12">
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
@@ -32,7 +32,7 @@ export default function ContactPage() {
 
       <Section>
         <Container size="narrow">
-          <div className="rounded-2xl border border-line bg-bg-elevated/40 p-8 md:p-10">
+          <div className="rounded-2xl border border-line bg-bg-elevated p-8 md:p-10">
             <ContactForm />
           </div>
         </Container>

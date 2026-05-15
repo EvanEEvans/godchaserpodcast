@@ -1,35 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #1a1815;
-  --bg-elevated: #232019;
-  --bg-subtle: #2c2823;
-  --line: #3a342b;
-  --line-soft: #2a2620;
-  --text: #f7f3e8;
-  --text-dim: #c4bdb0;
-  --text-muted: #968d7e;
-  --accent: #d4a85a;
-  --accent-hover: #e0b56a;
-  --accent-deep: #a8854a;
-  --scripture: #c89c5e;
+  --bg: #f0ecf7;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #e6e0f0;
+  --bg-deep: #1a1d3a;
+  --line: #d4cce0;
+  --line-strong: #9b8fb5;
+  --text: #1a1d3a;
+  --text-dim: #4a4d6b;
+  --text-muted: #6b6e85;
+  --text-inverse: #ffffff;
+  --accent: #e6c155;
+  --accent-hover: #f0cd6a;
+  --accent-deep: #b89a3e;
+  --purple: #6b5b95;
+  --purple-hover: #7d6db0;
+  --gold-glow: rgba(230, 193, 85, 0.20);
+  --purple-glow: rgba(107, 91, 149, 0.18);
 }
 
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-subtle: var(--bg-subtle);
+  --color-bg-deep: var(--bg-deep);
   --color-line: var(--line);
-  --color-line-soft: var(--line-soft);
+  --color-line-strong: var(--line-strong);
   --color-text: var(--text);
   --color-text-dim: var(--text-dim);
   --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-deep: var(--accent-deep);
-  --color-scripture: var(--scripture);
-  --font-serif: var(--font-fraunces);
+  --color-purple: var(--purple);
+  --color-purple-hover: var(--purple-hover);
+  --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
 }
 
 html {
@@ -49,7 +58,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: var(--bg);
+  color: var(--text);
 }
 
 *,
@@ -58,17 +67,18 @@ body {
   border-color: var(--line);
 }
 
-/* Headline rhythm */
+/* Display font for headings and labels */
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--font-fraunces), ui-serif, Georgia, serif;
   color: var(--text);
-  letter-spacing: -0.015em;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
-/* Prose reading column */
+/* Reading column for posts */
 .prose-reading {
   max-width: 68ch;
   line-height: 1.75;
@@ -81,18 +91,23 @@ h4 {
 }
 
 .prose-reading h2 {
-  font-size: clamp(1.625rem, 3vw, 2rem);
-  font-weight: 600;
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
+  font-weight: 400;
   margin-top: 2.5em;
   margin-bottom: 0.6em;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
 
 .prose-reading h3 {
-  font-size: 1.375rem;
-  font-weight: 500;
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-top: 2em;
   margin-bottom: 0.5em;
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
 
 .prose-reading p {
@@ -100,15 +115,16 @@ h4 {
 }
 
 .prose-reading a {
-  color: var(--accent);
+  color: var(--purple);
   text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--accent) 40%, transparent);
+  text-decoration-color: color-mix(in oklab, var(--purple) 35%, transparent);
   text-underline-offset: 3px;
-  transition: text-decoration-color 200ms ease;
+  transition: text-decoration-color 200ms ease, color 200ms ease;
 }
 
 .prose-reading a:hover {
-  text-decoration-color: var(--accent);
+  color: var(--purple-hover);
+  text-decoration-color: var(--purple-hover);
 }
 
 .prose-reading strong {
@@ -122,11 +138,11 @@ h4 {
 }
 
 .prose-reading blockquote {
-  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   font-style: italic;
   font-size: 1.125rem;
   color: var(--text-dim);
-  border-left: 2px solid var(--accent);
+  border-left: 3px solid var(--accent);
   padding-left: 1.25rem;
   margin-left: 0;
 }
@@ -150,12 +166,12 @@ h4 {
 }
 
 .prose-reading li::marker {
-  color: var(--accent-deep);
+  color: var(--purple);
 }
 
 .prose-reading code {
   font-size: 0.9em;
-  background: var(--bg-elevated);
+  background: var(--bg-subtle);
   border: 1px solid var(--line);
   border-radius: 0.375rem;
   padding: 0.1em 0.35em;
@@ -168,7 +184,7 @@ h4 {
   width: 6rem;
 }
 
-/* Sticky reading progress bar */
+/* Reading progress bar */
 .reading-progress {
   position: fixed;
   top: 0;
@@ -179,32 +195,63 @@ h4 {
   transition: width 80ms linear;
 }
 
-/* Subtle gradient hero */
-.hero-gradient {
+/* Soft lavender-to-white hero wash (used on light hero variants) */
+.hero-wash {
   background:
     radial-gradient(
-      ellipse 1200px 600px at 10% 0%,
-      color-mix(in oklab, var(--accent) 14%, transparent),
+      ellipse 1100px 500px at 20% 0%,
+      var(--purple-glow),
       transparent 60%
     ),
-    linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--bg) 92%, black) 0%,
-      var(--bg) 60%
-    );
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 70%);
 }
 
-/* Card hover */
+/* Navy hero band (used on the main homepage hero) */
+.hero-navy {
+  background:
+    radial-gradient(
+      ellipse 900px 500px at 15% 0%,
+      var(--purple-glow),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 700px 400px at 90% 110%,
+      var(--gold-glow),
+      transparent 60%
+    ),
+    var(--bg-deep);
+}
+
+.hero-navy * {
+  color: var(--text-inverse);
+}
+
+.hero-navy h1,
+.hero-navy h2,
+.hero-navy h3 {
+  color: var(--text-inverse);
+}
+
+/* Card hover state */
 .card-hover {
-  transition: border-color 200ms ease, background-color 200ms ease;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
 }
 
 .card-hover:hover {
-  border-color: color-mix(in oklab, var(--accent) 35%, var(--line));
-  background-color: var(--bg-subtle);
+  border-color: var(--line-strong);
+  box-shadow: 0 8px 24px -12px rgba(26, 29, 58, 0.18);
 }
 
-/* Animation: fade-in-up */
+/* Sticky header scroll shadow */
+.header-shadow {
+  box-shadow: 0 4px 16px -8px rgba(26, 29, 58, 0.12);
+}
+
+/* Animations */
 @keyframes fade-in-up {
   from {
     opacity: 0;

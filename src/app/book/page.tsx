@@ -16,7 +16,7 @@ export default function BookPage() {
 
   return (
     <>
-      <section className="hero-gradient">
+      <section className="hero-wash">
         <Container>
           <div className="pt-24 pb-16 grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-center">
             <div>
@@ -83,7 +83,7 @@ export default function BookPage() {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-line-soft border-dashed bg-bg-elevated/30 p-8 min-h-[180px] flex flex-col justify-between"
+                className="rounded-2xl border border-line border-dashed bg-bg-elevated p-8 min-h-[180px] flex flex-col justify-between"
               >
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   Coming soon
@@ -110,12 +110,12 @@ function BookCover() {
       >
         <defs>
           <linearGradient id="cover-bg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#2c2823" />
-            <stop offset="100%" stopColor="#1a1815" />
+            <stop offset="0%" stopColor="#2a2d5a" />
+            <stop offset="100%" stopColor="#0f1226" />
           </linearGradient>
           <linearGradient id="cover-stroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#d4a85a" />
-            <stop offset="100%" stopColor="#a8854a" />
+            <stop offset="0%" stopColor="#e6c155" />
+            <stop offset="100%" stopColor="#b89a3e" />
           </linearGradient>
         </defs>
         <rect width="300" height="400" rx="6" fill="url(#cover-bg)" />
@@ -147,7 +147,7 @@ function BookCover() {
           fontFamily="serif"
           fontSize="22"
           letterSpacing="6"
-          fill="#f7f3e8"
+          fill="#ffffff"
         >
           THE
         </text>
@@ -158,7 +158,7 @@ function BookCover() {
           fontFamily="serif"
           fontSize="28"
           letterSpacing="2"
-          fill="#f7f3e8"
+          fill="#ffffff"
         >
           GODCHASER
         </text>
@@ -169,7 +169,7 @@ function BookCover() {
           fontFamily="serif"
           fontSize="10"
           letterSpacing="3"
-          fill="#d4a85a"
+          fill="#e6c155"
         >
           EV EVANS
         </text>

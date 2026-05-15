@@ -44,7 +44,7 @@ function Pill({
         "rounded-full border px-4 py-1.5 text-sm transition-colors",
         active
           ? "bg-accent text-bg border-accent"
-          : "border-line-soft text-text-dim hover:text-text hover:border-accent",
+          : "border-line text-text-dim hover:text-text hover:border-accent",
       )}
     >
       {label}

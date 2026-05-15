@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function BeginPage() {
   return (
     <>
-      <section className="hero-gradient">
+      <section className="hero-wash">
         <Container size="reading">
           <div className="pt-24 pb-12">
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
@@ -130,7 +130,7 @@ export default function BeginPage() {
             </Step>
           </div>
 
-          <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated/70 p-8">
+          <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold">
               Did you say yes? Tell us.
             </h2>

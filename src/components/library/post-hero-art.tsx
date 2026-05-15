@@ -12,7 +12,7 @@ export function PostHeroArt({ slug, category }: Props) {
   const variant = hashSlug(slug) % 6;
 
   return (
-    <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden border border-line bg-bg-elevated">
+    <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden border border-line bg-bg-deep">
       <svg
         viewBox="0 0 800 350"
         xmlns="http://www.w3.org/2000/svg"
@@ -20,18 +20,24 @@ export function PostHeroArt({ slug, category }: Props) {
         aria-hidden
       >
         <defs>
-          <radialGradient id={`glow-${slug}`} cx="50%" cy="50%" r="55%">
-            <stop offset="0%" stopColor="#d4a85a" stopOpacity="0.22" />
-            <stop offset="65%" stopColor="#d4a85a" stopOpacity="0.04" />
-            <stop offset="100%" stopColor="#d4a85a" stopOpacity="0" />
+          <radialGradient id={`glow-${slug}`} cx="20%" cy="0%" r="70%">
+            <stop offset="0%" stopColor="#6b5b95" stopOpacity="0.45" />
+            <stop offset="60%" stopColor="#6b5b95" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#6b5b95" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id={`gold-${slug}`} cx="95%" cy="100%" r="65%">
+            <stop offset="0%" stopColor="#e6c155" stopOpacity="0.30" />
+            <stop offset="60%" stopColor="#e6c155" stopOpacity="0.04" />
+            <stop offset="100%" stopColor="#e6c155" stopOpacity="0" />
           </radialGradient>
           <linearGradient id={`stroke-${slug}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#d4a85a" />
-            <stop offset="100%" stopColor="#a8854a" />
+            <stop offset="0%" stopColor="#e6c155" />
+            <stop offset="100%" stopColor="#b89a3e" />
           </linearGradient>
         </defs>
-        <rect width="800" height="350" fill="#232019" />
+        <rect width="800" height="350" fill="#1a1d3a" />
         <rect width="800" height="350" fill={`url(#glow-${slug})`} />
+        <rect width="800" height="350" fill={`url(#gold-${slug})`} />
         <Shape
           variant={variant}
           strokeId={`stroke-${slug}`}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="hero-gradient">
+      <section className="hero-wash">
         <Container>
           <div className="pt-24 pb-12">
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="not-prose mt-10 grid gap-4 sm:grid-cols-2">
             {UNIVERSE.map((u) => {
               const inner = (
-                <div className="card-hover h-full rounded-2xl border border-line-soft bg-bg-elevated/50 p-6">
+                <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated p-6">
                   <h3 className="font-serif text-xl font-semibold text-text">
                     {u.name}
                   </h3>
@@ -109,14 +109,14 @@ export default function AboutPage() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-line-soft bg-bg-elevated/40 px-4 py-2 text-sm text-text-dim hover:text-accent hover:border-accent transition-colors"
+                className="inline-flex items-center rounded-full border border-line bg-bg-elevated px-4 py-2 text-sm text-text-dim hover:text-accent hover:border-accent transition-colors"
               >
                 {p.name}
               </a>
             ))}
           </div>
 
-          <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated/70 p-8">
+          <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold">
               Connect
             </h2>

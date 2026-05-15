@@ -10,7 +10,7 @@ export function PostCard({ post }: Props) {
   return (
     <Link
       href={post.href}
-      className="card-hover group flex flex-col rounded-2xl border border-line-soft bg-bg-elevated/60 p-6 h-full"
+      className="card-hover group flex flex-col rounded-2xl border border-line bg-bg-elevated p-6 h-full"
     >
       <span className="text-[0.7rem] tracking-[0.24em] uppercase text-accent">
         {post.category}

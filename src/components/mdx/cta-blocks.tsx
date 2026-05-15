@@ -4,7 +4,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 
 export function BSPCTA() {
   return (
-    <aside className="my-12 rounded-2xl border border-accent/40 bg-bg-elevated/70 p-8">
+    <aside className="my-12 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
       <p className="text-xs tracking-[0.24em] uppercase text-accent">
         Bible Study Pro
       </p>
@@ -29,7 +29,7 @@ export function BSPCTA() {
 
 export function BookCTA() {
   return (
-    <aside className="my-12 rounded-2xl border border-line bg-bg-elevated/70 p-8">
+    <aside className="my-12 rounded-2xl border border-line bg-bg-elevated p-8">
       <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
         The Book
       </p>

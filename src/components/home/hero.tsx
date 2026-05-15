@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden hero-gradient">
+    <section className="relative overflow-hidden hero-wash">
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 pt-24 md:pt-40 pb-20 md:pb-32">
         <p className="fade-in-up text-xs tracking-[0.32em] uppercase text-accent">
           Introducing — Bible Study Pro
@@ -36,7 +36,7 @@ export function Hero() {
           ].map(([primary, secondary]) => (
             <div
               key={primary}
-              className="rounded-2xl border border-line-soft bg-bg-elevated/60 p-5"
+              className="rounded-2xl border border-line bg-bg-elevated p-5"
             >
               <dt className="font-serif text-base text-text">{primary}</dt>
               <dd className="text-xs uppercase tracking-[0.24em] text-text-muted mt-2">

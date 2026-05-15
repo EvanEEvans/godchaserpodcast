@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function BelievePage() {
   return (
     <>
-      <section className="hero-gradient">
+      <section className="hero-wash">
         <Container>
           <div className="pt-24 pb-16">
             <p className="text-xs tracking-[0.28em] uppercase text-accent">
@@ -27,7 +27,7 @@ export default function BelievePage() {
               and we believe they are clear in Scripture for any honest reader.
             </p>
 
-            <blockquote className="mt-10 max-w-2xl border-l-2 border-accent pl-6 font-serif italic text-lg text-scripture">
+            <blockquote className="mt-10 max-w-2xl border-l-2 border-accent pl-6 font-serif italic text-lg text-text-dim">
               For I am not ashamed of the gospel, for it is the power of God for
               salvation to everyone who believes.
               <span className="block mt-2 not-italic text-xs uppercase tracking-[0.24em] text-text-muted">
@@ -44,7 +44,7 @@ export default function BelievePage() {
             {BELIEFS.map((b, i) => (
               <li
                 key={b.title}
-                className="rounded-2xl border border-line-soft border-l-2 border-l-accent bg-bg-elevated/50 p-6"
+                className="rounded-2xl border border-line border-l-2 border-l-accent bg-bg-elevated p-6"
               >
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   {String(i + 1).padStart(2, "0")}

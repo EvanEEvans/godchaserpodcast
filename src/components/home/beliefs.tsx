@@ -21,7 +21,7 @@ export function Beliefs() {
           {BELIEFS.map((b) => (
             <li
               key={b.title}
-              className="rounded-xl border border-line-soft border-l-2 border-l-accent bg-bg-elevated/50 px-5 py-4"
+              className="rounded-xl border border-line border-l-2 border-l-accent bg-bg-elevated px-5 py-4"
             >
               <h3 className="font-serif text-base font-medium text-text">
                 {b.title}
