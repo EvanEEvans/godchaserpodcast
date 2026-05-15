@@ -133,7 +133,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
                 <Link
                   key={p.slug}
                   href={p.href}
-                  className="card-hover rounded-2xl border border-line bg-bg-elevated/50 p-6 group"
+                  className="card-hover rounded-2xl border border-line-soft bg-bg-elevated/60 p-6 group"
                 >
                   <span className="text-[0.7rem] tracking-[0.24em] uppercase text-accent">
                     {p.category}

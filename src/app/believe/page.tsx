@@ -44,7 +44,7 @@ export default function BelievePage() {
             {BELIEFS.map((b, i) => (
               <li
                 key={b.title}
-                className="rounded-2xl border border-line border-l-2 border-l-accent bg-bg-elevated/50 p-6"
+                className="rounded-2xl border border-line-soft border-l-2 border-l-accent bg-bg-elevated/50 p-6"
               >
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   {String(i + 1).padStart(2, "0")}

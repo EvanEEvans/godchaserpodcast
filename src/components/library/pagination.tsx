@@ -54,8 +54,8 @@ function PaginationLink({
   const classes = cn(
     "rounded-full border px-5 py-2 text-sm transition-colors",
     disabled
-      ? "border-line text-text-muted opacity-40 pointer-events-none"
-      : "border-line text-text-dim hover:text-accent hover:border-accent",
+      ? "border-line-soft text-text-muted opacity-40 pointer-events-none"
+      : "border-line-soft text-text-dim hover:text-accent hover:border-accent",
   );
   if (disabled)
     return (

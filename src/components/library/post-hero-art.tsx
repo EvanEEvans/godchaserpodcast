@@ -30,7 +30,7 @@ export function PostHeroArt({ slug, category }: Props) {
             <stop offset="100%" stopColor="#a8854a" />
           </linearGradient>
         </defs>
-        <rect width="800" height="350" fill="#141416" />
+        <rect width="800" height="350" fill="#232019" />
         <rect width="800" height="350" fill={`url(#glow-${slug})`} />
         <Shape
           variant={variant}

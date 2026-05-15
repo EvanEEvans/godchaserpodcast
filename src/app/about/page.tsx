@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="not-prose mt-10 grid gap-4 sm:grid-cols-2">
             {UNIVERSE.map((u) => {
               const inner = (
-                <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated/40 p-6">
+                <div className="card-hover h-full rounded-2xl border border-line-soft bg-bg-elevated/50 p-6">
                   <h3 className="font-serif text-xl font-semibold text-text">
                     {u.name}
                   </h3>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-line bg-bg-elevated/40 px-4 py-2 text-sm text-text-dim hover:text-accent hover:border-accent transition-colors"
+                className="inline-flex items-center rounded-full border border-line-soft bg-bg-elevated/40 px-4 py-2 text-sm text-text-dim hover:text-accent hover:border-accent transition-colors"
               >
                 {p.name}
               </a>

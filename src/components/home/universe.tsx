@@ -34,7 +34,7 @@ function UniverseCard({
   // The podcast card hosts inline platform pills, so it can't be a single anchor.
   if (card.showPlatforms) {
     return (
-      <div className="rounded-2xl border border-line bg-bg-elevated/50 p-8 flex flex-col">
+      <div className="rounded-2xl border border-line-soft bg-bg-elevated/60 p-8 flex flex-col">
         <h3 className="font-serif text-2xl font-semibold text-text">
           {card.name}
         </h3>
@@ -46,7 +46,7 @@ function UniverseCard({
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-line bg-bg px-3 py-1.5 text-xs text-text-dim hover:text-accent hover:border-accent transition-colors"
+              className="inline-flex items-center rounded-full border border-line-soft bg-bg px-3 py-1.5 text-xs text-text-dim hover:text-accent hover:border-accent transition-colors"
             >
               {p.short}
             </a>
@@ -57,7 +57,7 @@ function UniverseCard({
   }
 
   const inner = (
-    <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated/50 p-8 flex flex-col">
+    <div className="card-hover h-full rounded-2xl border border-line-soft bg-bg-elevated/60 p-8 flex flex-col">
       <h3 className="font-serif text-2xl font-semibold text-text group-hover:text-accent transition-colors">
         {card.name}
       </h3>

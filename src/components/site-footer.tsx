@@ -163,7 +163,7 @@ export function SiteFooter() {
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-line px-3 py-1.5 text-xs text-text-dim hover:text-accent hover:border-accent transition-colors"
+                  className="inline-flex items-center rounded-full border border-line-soft px-3 py-1.5 text-xs text-text-dim hover:text-accent hover:border-accent transition-colors"
                 >
                   {p.short}
                 </a>

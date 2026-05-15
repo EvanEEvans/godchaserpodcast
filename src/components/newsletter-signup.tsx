@@ -94,7 +94,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading" || status === "success"}
-          className="flex-1 rounded-full bg-bg border border-line px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="flex-1 rounded-full bg-bg border border-line-soft px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
         />
         <button
           type="submit"

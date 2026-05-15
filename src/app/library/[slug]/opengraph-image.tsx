@@ -27,8 +27,8 @@ export default async function Image({
           justifyContent: "space-between",
           padding: "72px 96px",
           background:
-            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(212,168,90,0.22), transparent 60%), #0b0b0c",
-          color: "#f5f3ee",
+            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(212,168,90,0.20), transparent 60%), #1a1815",
+          color: "#f7f3e8",
           fontFamily: "serif",
         }}
       >
@@ -54,7 +54,7 @@ export default async function Image({
             />
             The Godchaser
           </div>
-          <div style={{ display: "flex", color: "#b8b3a8" }}>{category}</div>
+          <div style={{ display: "flex", color: "#c4bdb0" }}>{category}</div>
         </div>
 
         <div
@@ -75,7 +75,7 @@ export default async function Image({
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            color: "#8a857a",
+            color: "#968d7e",
             fontSize: 22,
           }}
         >

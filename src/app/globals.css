@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0b0b0c;
-  --bg-elevated: #141416;
-  --bg-subtle: #1c1c1f;
-  --line: #2a2a2e;
-  --text: #f5f3ee;
-  --text-dim: #b8b3a8;
-  --text-muted: #8a857a;
+  --bg: #1a1815;
+  --bg-elevated: #232019;
+  --bg-subtle: #2c2823;
+  --line: #3a342b;
+  --line-soft: #2a2620;
+  --text: #f7f3e8;
+  --text-dim: #c4bdb0;
+  --text-muted: #968d7e;
   --accent: #d4a85a;
   --accent-hover: #e0b56a;
   --accent-deep: #a8854a;
@@ -19,6 +20,7 @@
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-subtle: var(--bg-subtle);
   --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
   --color-text: var(--text);
   --color-text-dim: var(--text-dim);
   --color-text-muted: var(--text-muted);
@@ -182,10 +184,14 @@ h4 {
   background:
     radial-gradient(
       ellipse 1200px 600px at 10% 0%,
-      color-mix(in oklab, var(--accent) 16%, transparent),
+      color-mix(in oklab, var(--accent) 14%, transparent),
       transparent 60%
     ),
-    linear-gradient(180deg, #0c0c0e 0%, var(--bg) 60%);
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg) 92%, black) 0%,
+      var(--bg) 60%
+    );
 }
 
 /* Card hover */

@@ -83,7 +83,7 @@ export default function BookPage() {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-line border-dashed bg-bg-elevated/30 p-8 min-h-[180px] flex flex-col justify-between"
+                className="rounded-2xl border border-line-soft border-dashed bg-bg-elevated/30 p-8 min-h-[180px] flex flex-col justify-between"
               >
                 <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
                   Coming soon
@@ -110,8 +110,8 @@ function BookCover() {
       >
         <defs>
           <linearGradient id="cover-bg" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#1c1c1f" />
-            <stop offset="100%" stopColor="#0b0b0c" />
+            <stop offset="0%" stopColor="#2c2823" />
+            <stop offset="100%" stopColor="#1a1815" />
           </linearGradient>
           <linearGradient id="cover-stroke" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#d4a85a" />
@@ -147,7 +147,7 @@ function BookCover() {
           fontFamily="serif"
           fontSize="22"
           letterSpacing="6"
-          fill="#f5f3ee"
+          fill="#f7f3e8"
         >
           THE
         </text>
@@ -158,7 +158,7 @@ function BookCover() {
           fontFamily="serif"
           fontSize="28"
           letterSpacing="2"
-          fill="#f5f3ee"
+          fill="#f7f3e8"
         >
           GODCHASER
         </text>

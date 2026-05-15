@@ -87,7 +87,7 @@ export function ContactForm() {
           required
           value={form.name}
           onChange={(e) => update("name", e.target.value)}
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="w-full rounded-xl bg-bg border border-line-soft px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
         />
       </Field>
 
@@ -99,7 +99,7 @@ export function ContactForm() {
           required
           value={form.email}
           onChange={(e) => update("email", e.target.value)}
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="w-full rounded-xl bg-bg border border-line-soft px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
         />
       </Field>
 
@@ -111,7 +111,7 @@ export function ContactForm() {
           onChange={(e) =>
             update("topic", e.target.value as (typeof TOPICS)[number])
           }
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors appearance-none"
+          className="w-full rounded-xl bg-bg border border-line-soft px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors appearance-none"
         >
           {TOPICS.map((t) => (
             <option key={t} value={t}>
