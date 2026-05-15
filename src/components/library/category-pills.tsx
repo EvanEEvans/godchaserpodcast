@@ -9,7 +9,7 @@ type Props = {
 
 export function CategoryPills({ activeSlug }: Props) {
   return (
-    <div className="sticky top-16 z-20 bg-bg/85 backdrop-blur-md border-b border-line">
+    <div className="sticky top-20 z-20 bg-bg-elevated border-b border-line">
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 py-4 flex flex-wrap gap-2">
         <Pill href="/library" label="All" active={!activeSlug} />
         {CATEGORIES.map((c) => {
@@ -41,10 +41,10 @@ function Pill({
     <Link
       href={href}
       className={cn(
-        "rounded-full border px-4 py-1.5 text-sm transition-colors",
+        "rounded-full border-2 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors",
         active
-          ? "bg-accent text-bg border-accent"
-          : "border-line text-text-dim hover:text-text hover:border-accent",
+          ? "bg-accent text-text border-accent"
+          : "border-purple/30 text-purple hover:border-purple hover:bg-purple hover:text-text-inverse",
       )}
     >
       {label}

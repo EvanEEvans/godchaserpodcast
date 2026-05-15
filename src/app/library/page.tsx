@@ -26,15 +26,15 @@ export default async function LibraryIndex(props: {
 
   return (
     <>
-      <section className="pt-24 pb-12">
+      <section className="pt-20 pb-12">
         <Container>
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
             The Library
           </p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight">
+          <h1 className="mt-4 font-display uppercase text-4xl md:text-6xl leading-tight tracking-[0.01em] text-text">
             Teaching, testimony, and tools for the chase.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-text-dim">
+          <p className="mt-5 max-w-2xl text-lg text-text-dim leading-relaxed">
             Essays on the Word, the gospel, the way of Jesus. Bible-first.
             Plain-English. Scripture cited every time.
           </p>

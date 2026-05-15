@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { Section } from "@/components/section";
 import { MDXContent } from "@/components/mdx/mdx-content";
-import { Button } from "@/components/button";
 import { readBookFile } from "@/lib/book";
 
 export const metadata: Metadata = {
@@ -16,66 +15,73 @@ export default function BookPage() {
 
   return (
     <>
-      <section className="hero-wash">
+      <section className="pt-16 md:pt-20 pb-12">
         <Container>
-          <div className="pt-24 pb-16 grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-center">
-            <div>
-              <p className="text-xs tracking-[0.28em] uppercase text-accent">
-                The Book
-              </p>
-              <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
-                The Godchaser.
-              </h1>
-              <p className="mt-5 text-lg text-text-dim max-w-xl">
-                A book for people who have decided drifting won&rsquo;t do.
-                Bible-soaked, Christ-centered, written for the chase.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="#sample" size="lg">
-                  Read the first chapter ↓
-                </Button>
-                <Button
-                  href="https://godchaser.faith"
-                  external
-                  variant="ghost"
-                  size="lg"
-                >
-                  Buy the book
-                </Button>
+          <div className="rounded-3xl bg-bg-elevated border border-line overflow-hidden">
+            <div className="grid gap-10 md:gap-12 md:grid-cols-[1.1fr_1fr] md:items-center p-8 md:p-14">
+              <div>
+                <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+                  The Book
+                </p>
+                <h1 className="mt-4 font-display uppercase text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-[0.01em] text-text">
+                  The Godchaser.
+                </h1>
+                <p className="mt-6 text-lg text-text-dim max-w-xl leading-relaxed">
+                  A book for people who have decided drifting won&rsquo;t do.
+                  Bible-soaked, Christ-centered, written for the chase.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="#sample"
+                    className="inline-flex items-center gap-2 rounded-full bg-purple text-text-inverse px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-purple-hover transition-colors"
+                  >
+                    Read the first chapter ↓
+                  </a>
+                  <a
+                    href="https://godchaser.faith"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+                  >
+                    Buy the book
+                  </a>
+                </div>
+                <p className="mt-3 text-xs text-text-muted">
+                  Buy links: Amazon and direct — Ev to confirm.
+                </p>
               </div>
-              <p className="mt-3 text-xs text-text-muted">
-                Buy links: Amazon and direct — Ev to confirm.
-              </p>
-            </div>
 
-            <BookCover />
+              <BookCover />
+            </div>
           </div>
         </Container>
       </section>
 
       <Section id="sample">
-        <Container size="reading">
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
-            Sample Chapter
-          </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
-            Chapter One.
-          </h2>
-          <div className="prose-reading mt-10">
-            <MDXContent source={chapterOne} />
+        <Container size="narrow">
+          <div className="rounded-3xl bg-bg-elevated border border-line p-8 md:p-14">
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+              Sample Chapter
+            </p>
+            <h2 className="mt-3 font-display uppercase text-4xl md:text-5xl tracking-[0.01em] text-text">
+              Chapter One.
+            </h2>
+            <div className="prose-reading mt-10 mx-auto">
+              <MDXContent source={chapterOne} />
+            </div>
           </div>
         </Container>
       </Section>
 
-      <Section tone="elevated">
+      <Section>
         <Container>
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
             More books
           </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">
             On the way.
           </h2>
-          <p className="mt-4 max-w-xl text-text-dim">
+          <p className="mt-4 max-w-xl text-text-dim leading-relaxed">
             More titles are coming — companions for the chase, study guides,
             and devotionals. We&rsquo;ll announce them here first.
           </p>
@@ -83,12 +89,12 @@ export default function BookPage() {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-line border-dashed bg-bg-elevated p-8 min-h-[180px] flex flex-col justify-between"
+                className="rounded-2xl bg-bg-elevated border-2 border-dashed border-line p-8 min-h-[180px] flex flex-col justify-between"
               >
-                <p className="text-xs tracking-[0.24em] uppercase text-text-muted">
+                <p className="text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-text-muted">
                   Coming soon
                 </p>
-                <p className="text-xl text-text-dim italic">
+                <p className="text-xl text-text-muted italic">
                   Title in progress
                 </p>
               </div>
@@ -103,9 +109,14 @@ export default function BookPage() {
 function BookCover() {
   return (
     <div className="relative aspect-[3/4] max-w-sm w-full mx-auto md:ml-auto md:mr-0">
+      <div
+        aria-hidden
+        className="absolute -inset-4 rounded-[2rem] blur-2xl"
+        style={{ background: "var(--purple-glow)" }}
+      />
       <svg
         viewBox="0 0 300 400"
-        className="w-full h-full drop-shadow-2xl"
+        className="relative w-full h-full drop-shadow-2xl rounded"
         aria-hidden
       >
         <defs>
@@ -144,31 +155,34 @@ function BookCover() {
           x="150"
           y="280"
           textAnchor="middle"
-          fontFamily="serif"
-          fontSize="22"
+          fontFamily="Helvetica, Arial, sans-serif"
+          fontSize="20"
           letterSpacing="6"
+          fontWeight="600"
           fill="#ffffff"
         >
           THE
         </text>
         <text
           x="150"
-          y="310"
+          y="312"
           textAnchor="middle"
-          fontFamily="serif"
-          fontSize="28"
-          letterSpacing="2"
+          fontFamily="Helvetica, Arial, sans-serif"
+          fontSize="30"
+          letterSpacing="3"
+          fontWeight="700"
           fill="#ffffff"
         >
           GODCHASER
         </text>
         <text
           x="150"
-          y="350"
+          y="352"
           textAnchor="middle"
-          fontFamily="serif"
+          fontFamily="Helvetica, Arial, sans-serif"
           fontSize="10"
           letterSpacing="3"
+          fontWeight="600"
           fill="#e6c155"
         >
           EV EVANS

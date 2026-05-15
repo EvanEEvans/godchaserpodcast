@@ -48,12 +48,12 @@ export default async function CategoryPage(props: {
 
   return (
     <>
-      <section className="pt-24 pb-12">
+      <section className="pt-20 pb-12">
         <Container>
-          <p className="text-xs tracking-[0.28em] uppercase text-accent">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
             Category
           </p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl font-semibold tracking-tight">
+          <h1 className="mt-4 font-display uppercase text-4xl md:text-6xl leading-tight tracking-[0.01em] text-text">
             {category}.
           </h1>
         </Container>

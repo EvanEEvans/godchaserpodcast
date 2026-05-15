@@ -12,27 +12,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="hero-wash">
+      <section className="pt-16 md:pt-20 pb-12">
         <Container>
-          <div className="pt-24 pb-12">
-            <p className="text-xs tracking-[0.28em] uppercase text-accent">
-              Contact
-            </p>
-            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight max-w-2xl">
-              Send us a message.
-            </h1>
-            <p className="mt-5 text-lg text-text-dim max-w-xl">
-              We read everything that comes through. Whether you have a
-              question, an invitation, or you just said yes to Jesus — we&rsquo;d
-              love to hear from you.
-            </p>
-          </div>
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+            Contact
+          </p>
+          <h1 className="mt-4 font-display uppercase text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-[0.01em] text-text max-w-2xl">
+            Send us a message.
+          </h1>
+          <p className="mt-6 text-lg text-text-dim max-w-xl leading-relaxed">
+            We read everything that comes through. Whether you have a question,
+            an invitation, or you just said yes to Jesus — we&rsquo;d love to
+            hear from you.
+          </p>
         </Container>
       </section>
 
       <Section>
         <Container size="narrow">
-          <div className="rounded-2xl border border-line bg-bg-elevated p-8 md:p-10">
+          <div className="rounded-3xl bg-bg-elevated border border-line p-8 md:p-12">
             <ContactForm />
           </div>
         </Container>

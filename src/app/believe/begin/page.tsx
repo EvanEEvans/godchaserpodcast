@@ -14,26 +14,24 @@ export const metadata: Metadata = {
 export default function BeginPage() {
   return (
     <>
-      <section className="hero-wash">
+      <section className="pt-16 md:pt-20 pb-8">
         <Container size="reading">
-          <div className="pt-24 pb-12">
-            <p className="text-xs tracking-[0.28em] uppercase text-accent">
-              Start Here
-            </p>
-            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
-              The simplest place to start.
-            </h1>
-            <p className="mt-5 text-lg text-text-dim">
-              Six short steps. Every claim is from the Bible. Read it slowly.
-              Then read it again with a Bible open.
-            </p>
-          </div>
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+            Start Here
+          </p>
+          <h1 className="mt-4 font-display uppercase text-5xl md:text-6xl leading-[0.95] tracking-[0.01em] text-text">
+            The simplest place to start.
+          </h1>
+          <p className="mt-5 text-lg text-text-dim leading-relaxed">
+            Six short steps. Every claim is from the Bible. Read it slowly.
+            Then read it again with a Bible open.
+          </p>
         </Container>
       </section>
 
       <Section>
-        <Container size="reading">
-          <div className="prose-reading">
+        <Container size="narrow">
+          <div className="prose-reading rounded-3xl bg-bg-elevated border border-line p-8 md:p-12 mx-auto">
             <Step number="01" verse="Romans 3:23">
               <h2>God made you, and He is good.</h2>
               <p>
@@ -130,37 +128,50 @@ export default function BeginPage() {
             </Step>
           </div>
 
-          <div className="mt-16 rounded-2xl border border-accent/40 bg-bg-elevated p-8">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold">
+          <div className="mt-16 rounded-2xl bg-bg-deep text-text-inverse p-8 md:p-10">
+            <h2 className="font-display uppercase text-2xl md:text-3xl tracking-[0.01em] text-text-inverse">
               Did you say yes? Tell us.
             </h2>
-            <p className="mt-3 text-text-dim">
+            <p className="mt-3 text-text-inverse/80 leading-relaxed">
               We&rsquo;d love to pray for you and point you to next steps. No
               sales pitch. No follow-up campaign. Just a brother or sister on
               the other end.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/contact">Tell us</Button>
-              <Button href={SITE.bspUrl} external variant="ghost">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
+              >
+                Tell us
+              </Link>
+              <a
+                href={SITE.bspUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-text-inverse/30 text-text-inverse px-6 py-3 text-sm font-medium hover:bg-text-inverse hover:text-text hover:border-text-inverse transition-colors"
+              >
                 Open Bible Study Pro
-              </Button>
-              <Button href="/library" variant="ghost">
+              </a>
+              <Link
+                href="/library"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-text-inverse/30 text-text-inverse px-6 py-3 text-sm font-medium hover:bg-text-inverse hover:text-text hover:border-text-inverse transition-colors"
+              >
                 Read the Library
-              </Button>
+              </Link>
             </div>
           </div>
 
           <p className="mt-12 text-center italic text-text-dim">
             Welcome home.
           </p>
-          <p className="mt-2 text-center italic text-accent">
+          <p className="mt-2 text-center italic text-accent-deep font-semibold">
             Soso lobi.
           </p>
 
           <p className="mt-10 text-center">
             <Link
               href="/believe"
-              className="text-sm text-text-muted hover:text-accent"
+              className="text-xs uppercase tracking-[0.14em] font-semibold text-purple hover:text-purple-hover"
             >
               ← Back to What We Believe
             </Link>
@@ -182,9 +193,9 @@ function Step({
 }) {
   return (
     <section className="border-t border-line pt-10 mt-10 first:border-0 first:pt-0 first:mt-0">
-      <div className="flex items-baseline gap-3 text-xs tracking-[0.24em] uppercase text-text-muted">
-        <span className="text-accent">{number}</span>
-        <span>· {verse}</span>
+      <div className="flex items-baseline gap-3 text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-text-muted">
+        <span className="text-purple">{number}</span>
+        <span className="text-accent-deep">· {verse}</span>
       </div>
       <div className="mt-4">{children}</div>
     </section>

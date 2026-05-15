@@ -57,19 +57,20 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-accent/40 bg-bg-elevated p-8">
-        <h2 className="font-display text-2xl md:text-3xl font-semibold text-accent">
-          Thank you.
-        </h2>
-        <p className="mt-3 text-text-dim">
-          {message}
+      <div className="rounded-2xl bg-bg-deep text-text-inverse p-8 md:p-10">
+        <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-accent">
+          Thank you
         </p>
-        <p className="mt-2 text-text-dim">
+        <h2 className="mt-3 font-display uppercase text-2xl md:text-3xl tracking-[0.01em] text-text-inverse">
+          Message received.
+        </h2>
+        <p className="mt-3 text-text-inverse/80">{message}</p>
+        <p className="mt-2 text-text-inverse/80">
           In the meantime, the Library is open.
         </p>
         <a
           href="/library"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-bg px-5 py-3 font-medium hover:bg-accent-hover transition-colors"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent text-text px-6 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors"
         >
           Browse the Library <span aria-hidden>→</span>
         </a>
@@ -87,7 +88,7 @@ export function ContactForm() {
           required
           value={form.name}
           onChange={(e) => update("name", e.target.value)}
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="w-full rounded-xl bg-bg border-2 border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-purple transition-colors"
         />
       </Field>
 
@@ -99,7 +100,7 @@ export function ContactForm() {
           required
           value={form.email}
           onChange={(e) => update("email", e.target.value)}
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="w-full rounded-xl bg-bg border-2 border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-purple transition-colors"
         />
       </Field>
 
@@ -111,7 +112,7 @@ export function ContactForm() {
           onChange={(e) =>
             update("topic", e.target.value as (typeof TOPICS)[number])
           }
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors appearance-none"
+          className="w-full rounded-xl bg-bg border-2 border-line px-4 py-3 text-text focus:outline-none focus:border-purple transition-colors appearance-none"
         >
           {TOPICS.map((t) => (
             <option key={t} value={t}>
@@ -129,15 +130,15 @@ export function ContactForm() {
           rows={6}
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
-          className="w-full rounded-xl bg-bg border border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors resize-y"
+          className="w-full rounded-xl bg-bg border-2 border-line px-4 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-purple transition-colors resize-y"
         />
       </Field>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 flex-wrap">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-accent text-bg px-6 py-3 font-medium hover:bg-accent-hover transition-colors disabled:opacity-60"
+          className="rounded-full bg-accent text-text px-7 py-3 text-sm font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors disabled:opacity-60"
         >
           {status === "loading" ? "Sending…" : "Send message"}
         </button>
@@ -162,7 +163,7 @@ function Field({
     <div>
       <label
         htmlFor={htmlFor}
-        className="block text-xs tracking-[0.18em] uppercase text-text-muted mb-2"
+        className="block text-[0.7rem] tracking-[0.18em] uppercase font-semibold text-text mb-2"
       >
         {label}
       </label>

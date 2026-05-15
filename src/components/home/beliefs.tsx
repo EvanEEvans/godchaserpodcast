@@ -5,13 +5,13 @@ import { BELIEFS } from "@/lib/site";
 
 export function Beliefs() {
   return (
-    <Section tone="elevated">
+    <Section>
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
             Statement of Faith
           </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">
             What we believe.
           </h2>
           <p className="mt-4 text-text-dim">Twelve things, all from the Book.</p>
@@ -21,9 +21,9 @@ export function Beliefs() {
           {BELIEFS.map((b) => (
             <li
               key={b.title}
-              className="rounded-xl border border-line border-l-2 border-l-accent bg-bg-elevated px-5 py-4"
+              className="rounded-xl bg-bg-elevated border border-line border-l-4 border-l-purple px-5 py-4"
             >
-              <h3 className="font-display text-base font-medium text-text">
+              <h3 className="font-display uppercase text-lg tracking-[0.02em] text-text">
                 {b.title}
               </h3>
             </li>
@@ -33,7 +33,7 @@ export function Beliefs() {
         <div className="mt-10">
           <Link
             href="/believe"
-            className="inline-flex items-center gap-2 text-accent hover:text-accent-hover"
+            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-accent transition-colors"
           >
             Read the full Statement <span aria-hidden>→</span>
           </Link>

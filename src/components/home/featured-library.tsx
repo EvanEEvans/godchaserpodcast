@@ -9,20 +9,20 @@ export function FeaturedLibrary() {
   if (posts.length === 0) return null;
 
   return (
-    <Section tone="elevated">
+    <Section>
       <Container>
         <div className="flex items-end justify-between gap-6 flex-wrap mb-12">
           <div>
-            <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
               From the Library
             </p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
+            <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">
               Latest teaching.
             </h2>
           </div>
           <Link
             href="/library"
-            className="text-sm text-accent hover:text-accent-hover"
+            className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-accent transition-colors"
           >
             Browse the full Library →
           </Link>

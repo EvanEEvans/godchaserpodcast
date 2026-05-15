@@ -8,10 +8,10 @@ export function Universe() {
     <Section>
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
             Beyond this page
           </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
+          <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">
             Other places we make disciples.
           </h2>
         </div>
@@ -34,11 +34,13 @@ function UniverseCard({
   // The podcast card hosts inline platform pills, so it can't be a single anchor.
   if (card.showPlatforms) {
     return (
-      <div className="rounded-2xl border border-line bg-bg-elevated p-8 flex flex-col">
-        <h3 className="font-display text-2xl font-semibold text-text">
+      <div className="rounded-2xl bg-bg-deep border border-bg-deep p-8 flex flex-col">
+        <h3 className="font-display uppercase text-2xl md:text-3xl tracking-[0.02em] text-text-inverse">
           {card.name}
         </h3>
-        <p className="mt-3 text-text-dim leading-relaxed">{card.blurb}</p>
+        <p className="mt-3 text-text-inverse/80 leading-relaxed">
+          {card.blurb}
+        </p>
         <div className="mt-6 flex flex-wrap gap-2">
           {PLATFORMS.map((p) => (
             <a
@@ -46,7 +48,7 @@ function UniverseCard({
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-line bg-bg px-3 py-1.5 text-xs text-text-dim hover:text-accent hover:border-accent transition-colors"
+              className="inline-flex items-center rounded-full border border-text-inverse/20 px-3 py-1.5 text-xs font-medium text-text-inverse hover:bg-accent hover:text-text hover:border-accent transition-colors"
             >
               {p.short}
             </a>
@@ -57,12 +59,14 @@ function UniverseCard({
   }
 
   const inner = (
-    <div className="card-hover h-full rounded-2xl border border-line bg-bg-elevated p-8 flex flex-col">
-      <h3 className="font-display text-2xl font-semibold text-text group-hover:text-accent transition-colors">
+    <div className="card-hover h-full rounded-2xl bg-bg-deep border-2 border-bg-deep group-hover:border-accent p-8 flex flex-col transition-colors">
+      <h3 className="font-display uppercase text-2xl md:text-3xl tracking-[0.02em] text-text-inverse group-hover:text-accent transition-colors">
         {card.name}
       </h3>
-      <p className="mt-3 text-text-dim leading-relaxed">{card.blurb}</p>
-      <span className="mt-6 text-sm text-accent">Visit →</span>
+      <p className="mt-3 text-text-inverse/80 leading-relaxed">{card.blurb}</p>
+      <span className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+        Visit →
+      </span>
     </div>
   );
 

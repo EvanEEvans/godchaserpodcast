@@ -52,10 +52,10 @@ function PaginationLink({
   children: React.ReactNode;
 }) {
   const classes = cn(
-    "rounded-full border px-5 py-2 text-sm transition-colors",
+    "rounded-full border-2 px-5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors",
     disabled
       ? "border-line text-text-muted opacity-40 pointer-events-none"
-      : "border-line text-text-dim hover:text-accent hover:border-accent",
+      : "border-purple/30 text-purple hover:bg-purple hover:text-text-inverse hover:border-purple",
   );
   if (disabled)
     return (

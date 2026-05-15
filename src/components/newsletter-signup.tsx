@@ -6,6 +6,10 @@ import { cn } from "@/lib/cn";
 type Status = "idle" | "loading" | "success" | "error";
 
 type Props = {
+  /**
+   * `section` — used inside a navy band (homepage). Transparent wrapper, white text, gold submit.
+   * `inline` — used inside posts on lavender bg. Self-contained navy card.
+   */
   variant?: "section" | "inline";
 };
 
@@ -43,41 +47,44 @@ export function NewsletterSignup({ variant = "section" }: Props) {
     }
   }
 
-  const wrapperClasses = cn(
-    variant === "section" &&
-      "rounded-2xl border border-line bg-bg-elevated p-8 md:p-12",
-    variant === "inline" &&
-      "rounded-2xl border border-line bg-bg-elevated p-6 my-12",
-  );
+  const inline = variant === "inline";
 
   return (
-    <div className={wrapperClasses}>
-      {variant === "section" ? (
-        <>
-          <p className="text-xs tracking-[0.28em] uppercase text-text-muted">
-            Newsletter
-          </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold">
-            Sunday letters.
-          </h2>
-          <p className="mt-4 text-text-dim max-w-xl">
-            One email a week. Teaching, a Scripture, what we&rsquo;re chasing.
-            No spam, ever.
-          </p>
-        </>
-      ) : (
-        <>
-          <p className="text-xs tracking-[0.24em] uppercase text-accent">
-            Sunday letters
-          </p>
-          <h3 className="mt-2 font-display text-2xl font-semibold">
-            Keep growing.
-          </h3>
-          <p className="mt-2 text-text-dim text-[0.95rem]">
-            One Scripture, one teaching, one challenge — every Sunday.
-          </p>
-        </>
+    <div
+      className={cn(
+        inline && "rounded-2xl bg-bg-deep p-8 md:p-10 my-12 text-text-inverse",
       )}
+    >
+      <p
+        className={cn(
+          "text-[0.7rem] tracking-[0.32em] uppercase font-semibold",
+          inline ? "text-accent" : "text-accent",
+        )}
+      >
+        {inline ? "Sunday letters" : "Newsletter"}
+      </p>
+      <h2
+        className={cn(
+          "mt-3 font-display uppercase tracking-[0.01em]",
+          inline
+            ? "text-2xl md:text-3xl text-text-inverse"
+            : "text-3xl md:text-5xl text-text-inverse",
+        )}
+      >
+        {inline ? "Keep growing." : "Sunday letters."}
+      </h2>
+      <p
+        className={cn(
+          "mt-4 max-w-xl leading-relaxed",
+          inline
+            ? "text-text-inverse/80 text-[0.95rem]"
+            : "text-text-inverse/80 text-lg",
+        )}
+      >
+        {inline
+          ? "One Scripture, one teaching, one challenge — every Sunday. No spam, ever."
+          : "One email a week. Teaching, a Scripture, what we're chasing. No spam, ever."}
+      </p>
 
       <form
         onSubmit={onSubmit}
@@ -94,17 +101,17 @@ export function NewsletterSignup({ variant = "section" }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading" || status === "success"}
-          className="flex-1 rounded-full bg-bg border border-line px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
+          className="flex-1 rounded-full bg-bg-elevated border border-line px-5 py-3 text-text placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors"
         />
         <button
           type="submit"
           disabled={status === "loading" || status === "success"}
-          className="rounded-full bg-accent text-bg px-6 py-3 font-medium hover:bg-accent-hover transition-colors disabled:opacity-60"
+          className="rounded-full bg-accent text-text px-7 py-3 font-semibold uppercase tracking-[0.06em] hover:bg-accent-hover transition-colors disabled:opacity-60"
         >
           {status === "loading"
             ? "Subscribing…"
             : status === "success"
-            ? "Subscribed"
+            ? "Subscribed ✓"
             : "Subscribe"}
         </button>
       </form>
@@ -113,7 +120,7 @@ export function NewsletterSignup({ variant = "section" }: Props) {
         <p
           className={cn(
             "mt-4 text-sm",
-            status === "success" ? "text-accent" : "text-text-dim",
+            status === "success" ? "text-accent" : "text-text-inverse/80",
           )}
         >
           {message}

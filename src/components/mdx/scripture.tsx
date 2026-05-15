@@ -5,11 +5,11 @@ type Props = {
 
 export function Scripture({ verse, children }: Props) {
   return (
-    <figure className="my-10 border-l-2 border-accent pl-6">
-      <blockquote className="italic text-[1.2rem] md:text-[1.3rem] leading-[1.55] text-text-dim">
+    <figure className="my-10 border-l-4 border-accent pl-6">
+      <blockquote className="italic text-[1.15rem] md:text-[1.25rem] leading-[1.6] text-text">
         {children}
       </blockquote>
-      <figcaption className="mt-3 text-xs tracking-[0.24em] uppercase text-text-muted">
+      <figcaption className="mt-3 text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-accent-deep">
         — {verse}
       </figcaption>
     </figure>

@@ -73,77 +73,90 @@ export default async function PostPage(props: { params: Promise<Params> }) {
   return (
     <>
       <ReadingProgress />
-      <article className="pt-20 pb-24">
-        <Container size="reading">
-          <p className="text-xs tracking-[0.28em] uppercase text-accent">
-            {post.category}
-          </p>
-          <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
-            {post.title}
-          </h1>
-          <p className="mt-5 text-text-dim text-lg leading-relaxed">
-            {post.excerpt}
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-text-muted">
-            <span>{formatDate(post.publishedAt)}</span>
-            <span aria-hidden>·</span>
-            <span>{post.readingTime}</span>
-          </div>
-        </Container>
+      <article className="pt-16 pb-24">
+        <Container size="narrow">
+          <div className="rounded-3xl bg-bg-elevated border border-line overflow-hidden">
+            <header className="px-6 sm:px-10 md:px-16 pt-12 md:pt-16">
+              <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
+                {post.category}
+              </p>
+              <h1 className="mt-4 font-display uppercase text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-[0.01em] text-text">
+                {post.title}
+              </h1>
+              <p className="mt-5 text-text-dim text-lg leading-relaxed">
+                {post.excerpt}
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-text-muted">
+                <span>{formatDate(post.publishedAt)}</span>
+                <span aria-hidden>·</span>
+                <span>{post.readingTime}</span>
+              </div>
+            </header>
 
-        <Container size="narrow" className="mt-12">
-          <PostHeroArt slug={post.slug} category={post.category} />
-        </Container>
-
-        <Container size="reading" className="mt-16">
-          <div className="prose-reading">
-            <MDXContent source={before} />
-          </div>
-
-          {after && <CTAFor kind={post.cta} />}
-
-          {after && (
-            <div className="prose-reading">
-              <MDXContent source={after} />
+            <div className="mt-10 px-6 sm:px-10 md:px-16">
+              <PostHeroArt slug={post.slug} category={post.category} />
             </div>
-          )}
 
-          <hr className="my-16 border-t border-line" />
+            <div className="px-6 sm:px-10 md:px-16 pt-12 md:pt-14 pb-12">
+              <div className="prose-reading mx-auto">
+                <MDXContent source={before} />
+              </div>
 
-          <CTAFor kind={post.cta} />
+              {after && (
+                <div className="mx-auto max-w-[68ch]">
+                  <CTAFor kind={post.cta} />
+                </div>
+              )}
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
-            <p className="text-sm text-text-muted">
-              Soso lobi.{" "}
-              <span className="italic">
-                — Only love. Ev signs off.
-              </span>
-            </p>
-            <ShareButtons url={canonicalUrl} title={post.title} />
+              {after && (
+                <div className="prose-reading mx-auto">
+                  <MDXContent source={after} />
+                </div>
+              )}
+
+              <hr className="my-14 border-t border-line w-24 mx-auto" />
+
+              <div className="mx-auto max-w-[68ch]">
+                <CTAFor kind={post.cta} />
+              </div>
+
+              <div className="mx-auto max-w-[68ch] mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8">
+                <p className="text-sm text-text-muted italic">
+                  Soso lobi. <span className="not-italic">— Ev</span>
+                </p>
+                <ShareButtons url={canonicalUrl} title={post.title} />
+              </div>
+            </div>
           </div>
         </Container>
 
         {related.length > 0 && (
-          <Container className="mt-24">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold">
+          <Container className="mt-20">
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase font-semibold text-purple">
               Read next
+            </p>
+            <h2 className="mt-3 font-display uppercase text-3xl md:text-4xl tracking-[0.01em] text-text">
+              Keep going.
             </h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {related.map((p) => (
                 <Link
                   key={p.slug}
                   href={p.href}
                   className="card-hover rounded-2xl border border-line bg-bg-elevated p-6 group"
                 >
-                  <span className="text-[0.7rem] tracking-[0.24em] uppercase text-accent">
+                  <span className="text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-purple">
                     {p.category}
                   </span>
-                  <h3 className="mt-3 font-display text-xl font-semibold group-hover:text-accent transition-colors">
+                  <h3 className="mt-3 font-display uppercase text-xl md:text-2xl leading-tight tracking-[0.01em] text-text group-hover:text-purple transition-colors">
                     {p.title}
                   </h3>
                   <p className="mt-2 text-text-dim text-[0.95rem]">
                     {p.excerpt}
                   </p>
+                  <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.14em] text-accent-deep">
+                    Read →
+                  </span>
                 </Link>
               ))}
             </div>
