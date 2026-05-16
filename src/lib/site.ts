@@ -60,8 +60,8 @@ export const UNIVERSE = [
     showPlatforms: false,
   },
   {
-    name: "The Music",
-    blurb: "Sagomba One — songs that point to Jesus.",
+    name: "Godchaser Music",
+    blurb: "Songs that point to Jesus.",
     href: "https://godchaser.sagomba.one",
     external: true,
     showPlatforms: false,

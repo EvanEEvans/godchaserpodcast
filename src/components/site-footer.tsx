@@ -41,7 +41,7 @@ export function SiteFooter() {
               The Clothes
             </FooterLink>
             <FooterLink href="https://godchaser.sagomba.one" external>
-              The Music
+              Godchaser Music
             </FooterLink>
             <FooterLink href="/book">The Book</FooterLink>
           </FooterColumn>
