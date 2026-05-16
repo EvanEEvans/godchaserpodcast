@@ -26,13 +26,13 @@ export function PostHeroArt({ slug, category }: Props) {
             <stop offset="100%" stopColor="#72709b" stopOpacity="0" />
           </radialGradient>
           <radialGradient id={`gold-${slug}`} cx="95%" cy="100%" r="65%">
-            <stop offset="0%" stopColor="#f6e979" stopOpacity="0.30" />
-            <stop offset="60%" stopColor="#f6e979" stopOpacity="0.04" />
-            <stop offset="100%" stopColor="#f6e979" stopOpacity="0" />
+            <stop offset="0%" stopColor="#c9a437" stopOpacity="0.30" />
+            <stop offset="60%" stopColor="#c9a437" stopOpacity="0.04" />
+            <stop offset="100%" stopColor="#c9a437" stopOpacity="0" />
           </radialGradient>
           <linearGradient id={`stroke-${slug}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#f6e979" />
-            <stop offset="100%" stopColor="#d4c54a" />
+            <stop offset="0%" stopColor="#c9a437" />
+            <stop offset="100%" stopColor="#a48226" />
           </linearGradient>
         </defs>
         <rect width="800" height="350" fill="#14163c" />

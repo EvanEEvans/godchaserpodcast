@@ -17,7 +17,7 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: "80px 96px",
           background:
-            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(114,112,155,0.30), transparent 60%), radial-gradient(ellipse 700px 400px at 95% 105%, rgba(246,233,121,0.18), transparent 60%), #14163c",
+            "radial-gradient(ellipse 900px 500px at 12% 0%, rgba(114,112,155,0.30), transparent 60%), radial-gradient(ellipse 700px 400px at 95% 105%, rgba(201,164,55,0.18), transparent 60%), #14163c",
           color: "#ffffff",
           fontFamily: "sans-serif",
         }}
@@ -27,7 +27,7 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             gap: 16,
-            color: "#f6e979",
+            color: "#c9a437",
             letterSpacing: "0.18em",
             fontSize: 22,
             textTransform: "uppercase",
@@ -38,7 +38,7 @@ export default async function Image() {
             style={{
               width: 10,
               height: 10,
-              background: "#f6e979",
+              background: "#c9a437",
               borderRadius: 999,
             }}
           />
@@ -82,7 +82,7 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex" }}>godchaserpodcast.com</div>
-          <div style={{ display: "flex", color: "#f6e979" }}>
+          <div style={{ display: "flex", color: "#c9a437" }}>
             Bible Study Pro inside
           </div>
         </div>

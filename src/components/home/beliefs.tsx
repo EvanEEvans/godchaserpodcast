@@ -35,7 +35,7 @@ export function Beliefs() {
         <div className="mt-10">
           <Link
             href="/believe"
-            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-text transition-colors"
           >
             Read the full Statement <span aria-hidden>→</span>
           </Link>

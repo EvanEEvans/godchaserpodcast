@@ -22,7 +22,7 @@ export function FeaturedLibrary() {
           </div>
           <Link
             href="/library"
-            className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-accent transition-colors"
+            className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-deep hover:text-text transition-colors"
           >
             Browse the full Library →
           </Link>
