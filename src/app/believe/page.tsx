@@ -33,24 +33,66 @@ export default function BelievePage() {
               — Romans 1:16
             </span>
           </blockquote>
+
+          {/* Anchor nav */}
+          <nav aria-label="Jump to belief" className="mt-12">
+            <p className="text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-purple-deep">
+              Jump to
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {BELIEFS.map((b, i) => (
+                <li key={b.slug}>
+                  <a
+                    href={`#${b.slug}`}
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-purple text-purple-deep px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] hover:bg-purple hover:text-text-inverse transition-colors"
+                  >
+                    <span className="font-bold">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>{b.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </Container>
       </section>
 
-      <Section>
+      <Section tone="lavender">
         <Container>
-          <ol className="grid gap-6 md:grid-cols-2">
+          <ol className="grid gap-6">
             {BELIEFS.map((b, i) => (
               <li
-                key={b.title}
-                className="rounded-2xl bg-bg-elevated border border-line border-l-4 border-l-purple p-6"
+                key={b.slug}
+                id={b.slug}
+                className="scroll-mt-24 rounded-2xl bg-bg-elevated border border-line border-l-4 border-l-purple p-6 md:p-10"
               >
                 <p className="text-[0.7rem] tracking-[0.28em] uppercase font-semibold text-purple">
-                  {String(i + 1).padStart(2, "0")}
+                  Belief {String(i + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-3 font-display uppercase text-2xl md:text-3xl tracking-[0.01em] text-text">
+                <h2 className="mt-3 font-display uppercase text-2xl md:text-4xl tracking-[0.01em] text-text">
                   {b.title}
                 </h2>
-                <p className="mt-3 text-text-dim leading-relaxed">{b.body}</p>
+                <p className="mt-5 text-text leading-relaxed text-[1.0625rem] max-w-[68ch]">
+                  {b.body}
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span className="text-[0.65rem] uppercase tracking-[0.28em] font-bold text-accent-deep">
+                    Scripture
+                  </span>
+                  {b.scriptures.map((s, idx) => (
+                    <span key={s} className="flex items-center gap-3">
+                      <span className="text-sm font-semibold text-accent-deep">
+                        {s}
+                      </span>
+                      {idx < b.scriptures.length - 1 ? (
+                        <span aria-hidden className="text-purple/40">
+                          ·
+                        </span>
+                      ) : null}
+                    </span>
+                  ))}
+                </div>
               </li>
             ))}
           </ol>

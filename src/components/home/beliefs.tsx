@@ -19,13 +19,15 @@ export function Beliefs() {
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {BELIEFS.map((b) => (
-            <li
-              key={b.title}
-              className="rounded-xl bg-bg-elevated border border-line border-l-4 border-l-purple px-5 py-4"
-            >
-              <h3 className="font-display uppercase text-lg tracking-[0.02em] text-text">
-                {b.title}
-              </h3>
+            <li key={b.slug}>
+              <Link
+                href={`/believe#${b.slug}`}
+                className="block h-full rounded-xl bg-bg-elevated border border-line border-l-4 border-l-purple px-5 py-4 hover:border-l-accent-deep hover:bg-bg-subtle transition-colors"
+              >
+                <h3 className="font-display uppercase text-lg tracking-[0.02em] text-text">
+                  {b.title}
+                </h3>
+              </Link>
             </li>
           ))}
         </ul>
