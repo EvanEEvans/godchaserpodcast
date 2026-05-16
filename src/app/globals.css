@@ -106,6 +106,17 @@ h4 {
   margin-top: 1.5em;
 }
 
+.prose-reading h1 {
+  font-family: var(--font-anton), "Helvetica Neue", Impact, Arial, sans-serif;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 400;
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
 .prose-reading h2 {
   font-family: var(--font-anton), "Helvetica Neue", Impact, Arial, sans-serif;
   font-size: clamp(1.875rem, 3.2vw, 2.5rem);
@@ -114,6 +125,21 @@ h4 {
   margin-bottom: 0.6em;
   letter-spacing: 0.02em;
   color: var(--text);
+}
+
+.prose-chapter > h1:first-child {
+  margin-top: 0;
+}
+
+.prose-chapter > h4 {
+  font-family: var(--font-anton), "Helvetica Neue", Impact, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-transform: uppercase;
 }
 
 .prose-reading h3 {
